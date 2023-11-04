@@ -1,6 +1,7 @@
 local mainFrame = script.Parent.mainFrame;
 local infoFrame = mainFrame.infoFrame;
-
+local infoLabel = infoFrame.infoLabel:Clone();
+infoFrame.infoLabel:Destroy();
 local newUDim2 = UDim2.new;
 
 local targetPos = newUDim2(0, 205, 0, 40);
@@ -26,8 +27,7 @@ infoFrame.ChildRemoved:Connect(function(child)
 	end;
 end);
 
-local infoLabel = infoFrame.infoLabel:Clone();
-infoFrame.infoLabel:Destroy();
+
 
 local popup = {};
 
