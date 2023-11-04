@@ -1,7 +1,25 @@
 local mainFrame = script.Parent.mainFrame;
 local infoFrame = mainFrame.infoFrame;
-local infoLabel = infoFrame.infoLabel:Clone();
-infoFrame.infoLabel:Destroy();
+function CreateINFOLable()
+	NewTextLabel0 = Instance.new('TextLabel')
+	NewTextLabel0.Name = 'infoLabel'
+	NewTextLabel0.Size = UDim2.new(1,0,0,20)
+	NewTextLabel0.BackgroundColor3 = Color3.new(1, 1, 1)
+	NewTextLabel0.BackgroundTransparency = 1
+	NewTextLabel0.ClipsDescendants = false
+	NewTextLabel0.Selectable = false
+	NewTextLabel0.BorderSizePixel = 0
+	NewTextLabel0.Active = false
+	NewTextLabel0.Font = Enum.Font.SourceSansLight
+	NewTextLabel0.RichText = false
+	NewTextLabel0.Text = 'N/A'
+	NewTextLabel0.TextColor3 = Color3.new(1, 1, 1)
+	NewTextLabel0.TextScaled = false
+	NewTextLabel0.TextSize = 18
+	NewTextLabel0.TextWrapped = false
+	return NewTextLabel0
+end
+local infoLabel = CreateINFOLable()
 local newUDim2 = UDim2.new;
 
 local targetPos = newUDim2(0, 205, 0, 40);
